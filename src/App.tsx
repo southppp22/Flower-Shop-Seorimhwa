@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
 function App() {
-	return <div className='App'>seorimhwa</div>;
+  return <div className="App">seorimhwa</div>;
 }
 
 export default App;
