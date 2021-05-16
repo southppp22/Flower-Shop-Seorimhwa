@@ -14,7 +14,8 @@
     }
   },
   "rules": {
-    "react/jsx-uses-vars": "error"
+    "react/jsx-uses-vars": "error",
+    "prettier/prettier": 0
   },
   "ignorePatterns": ["*.config.js"]
 }
