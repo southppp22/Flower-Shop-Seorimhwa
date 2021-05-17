@@ -2,13 +2,13 @@ import styled, { css } from "styled-components";
 import { ifProp, palette, theme } from "styled-tools";
 import { Link } from "react-router-dom";
 
-interface BtnStyleProps {
+interface BtnProps {
   styletype: string;
   fit?: boolean;
   grow?: boolean;
 }
 
-export const BtnStyle = css<BtnStyleProps>`
+export const BtnStyle = css<BtnProps>`
   &,
   &:visited,
   &:link {
@@ -72,7 +72,6 @@ export const Anchor = styled.a`
 
 export const StyledBtn = styled.button`
   ${BtnStyle}
-  line-height: 1.4rem + 1px;
 `;
 
 export const StyledLink = styled(Link)`

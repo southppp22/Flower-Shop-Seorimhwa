@@ -5,10 +5,12 @@ const theme = {
     gray: `#cccccc`,
     yellow: `#FFD900`,
     orange: `#FA5401`,
+    green: `#00A544`,
+    red: `#E93E40`,
+    pink: `#E9C2C4`,
     lightOrange: `#FFAE66`,
     lightGreen: `#ABC932`,
     lightPurple: `#A7AEEC`,
-    pink: `#E9C2C4`,
     transparent: "transparent",
     grayscale: [
       "#212121",
@@ -20,7 +22,7 @@ const theme = {
       "#eeeeee",
       "#ffffff",
     ],
-    opacityscale: [0.9, 0.8, 0.7, 0.6, 0.5],
+    opacityscale: [0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.45],
   },
   fontStyle: {
     h1: `
@@ -85,6 +87,11 @@ const theme = {
       font-size: 1rem;
       font-weight: 400;
       letter-spacing: 0.015rem;
+    `,
+    textarea: `
+      font-size: 1.6rem;
+      font-weight: 400;
+      letter-spacing: 0.03rem;
     `,
   },
 };
