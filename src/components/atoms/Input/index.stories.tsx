@@ -11,7 +11,7 @@ const Template: Story<Props> = (args) => <Input {...args} />;
 
 export const general = Template.bind({});
 general.args = {
-  inputName: "test",
+  name: "test",
   placeholder: "placeholder",
   disabled: false,
   invalid: false,
