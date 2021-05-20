@@ -1,6 +1,5 @@
 import React from "react";
 import { Story } from "@storybook/react";
-import t from "../../../assets/images/test.jpeg";
 
 import Image, { Props } from "./index";
 
