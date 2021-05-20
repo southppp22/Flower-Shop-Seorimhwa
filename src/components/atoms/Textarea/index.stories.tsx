@@ -14,7 +14,7 @@ export default {
     },
   },
   decorators: [
-    (Story) => (
+    (Story: any): React.ReactElement => (
       <div style={{ margin: "3em", width: "40rem", height: "10rem" }}>
         <Story />
       </div>
