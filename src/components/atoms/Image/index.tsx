@@ -7,8 +7,8 @@ export interface Props {
   src: string;
 }
 
-function Img({ alt, src }: Props): React.ReactElement {
+function Image({ alt, src }: Props): React.ReactElement {
   return <S.Image alt={alt} src={src} />;
 }
 
-export default Img;
+export default Image;
