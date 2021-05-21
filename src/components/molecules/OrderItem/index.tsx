@@ -10,6 +10,8 @@ export interface Props {
   quantity: number;
   //옵션 변경 모달창
   to: string;
+  //click handler
+  onClick?: () => void;
 }
 
 function OrderItem({
@@ -18,6 +20,7 @@ function OrderItem({
   price,
   quantity,
   to,
+  onClick,
 }: Props): React.ReactElement {
   return (
     <S.Container>
@@ -32,7 +35,7 @@ function OrderItem({
       </S.InfoConatiner>
       <S.OptionWrapper>옵션 변경</S.OptionWrapper>
       <S.PriceWrapper>{price} 원</S.PriceWrapper>
-      <S.DeleteBtn>
+      <S.DeleteBtn onClick={onClick}>
         <S.DeleteIcon>&nbsp;</S.DeleteIcon>
       </S.DeleteBtn>
     </S.Container>
