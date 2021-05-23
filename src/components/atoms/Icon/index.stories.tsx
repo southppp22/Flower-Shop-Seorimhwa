@@ -1,30 +1,21 @@
-import React from 'react';
-import { text } from '@storybook/addon-knobs';
-
-import Icon from '.';
-import userIcon from '../../../assets/image/userIcon.png';
+import React from "react";
+import { Story } from "@storybook/react";
+import Icon, { Props } from ".";
 
 export default {
-  title: 'Atoms / Icon',
+  title: "Atoms / Icon",
+  decorators: [
+    (Story: any): React.ReactElement => (
+      <Story />
+    )
+  ]
 }
 
-export const index: React.FC = () => (
-  <div style={{ padding: '1rem' }}>
-    <Icon
-      alt={text('alt', 'Google')}
-      height={text('height', '2rem')}
-      src={userIcon}
-    />
-  </div>
-);
+const Template: Story<Props> = (args) => <Icon {...args} />
 
-export const circular: React.FC = () => (
-  <div style={{ padding: '1rem' }}>
-    <Icon
-      alt={text('alt', 'Google')}
-      height={text('height', '2rem')}
-      src={userIcon}
-      circular
-    />
-  </div>
-)
+export const general = Template.bind({});
+general.args = {
+  src: "https://firebasestorage.googleapis.com/v0/b/seorimhwa-project.appspot.com/o/userIcon.png?alt=media&token=177d448e-7889-4260-9adb-7a32844cf786",
+  alt: "sample",
+  height: "20rem"
+}
