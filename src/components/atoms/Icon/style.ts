@@ -3,5 +3,5 @@ import { ifProp } from 'styled-tools';
 
 export const Img = styled.img`
   height: ${props => props.height};
-  border-radius: ${ifProp('circular', '50%', '')};
+  border-radius: ${ifProp('circular', '70%', '')};
 `

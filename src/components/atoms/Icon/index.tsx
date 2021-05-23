@@ -8,12 +8,10 @@ export interface Props {
   /** 크기 */
   height?: string;
   /** 아이콘 소스 */
-  src: any;
-  /** circular img */
-  circular?: boolean;
+  src: string;
 }
 
-function Icon({ height = '2rem', ...props }: Props): React.ReactElement {
+function Icon({ height = '5rem', ...props }: Props): React.ReactElement {
   return <S.Img height={height} {...props} />;
 }
 
