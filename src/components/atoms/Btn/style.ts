@@ -12,23 +12,23 @@ export const BtnStyle = css<BtnProps>`
   &,
   &:visited,
   &:link {
-    ${theme("fontStyle.button")}
+    ${theme("fontStyle.button")};
     flex-grow: ${ifProp("grow", "1", "0")};
-    width: ${ifProp("fit", "fit-content", "18rem")}
-    height: ${ifProp("fit", "auto", "4rem")}
+    width: ${ifProp("fit", "fit-content", "18rem")};
+    height: ${ifProp("fit", "auto", "4rem")};
     line-height: 1.4rem;
     background-color: ${ifProp("disabled", palette("grayscale", 3), (props) =>
-      palette(props.styletype)
-    )};
+  palette(props.styletype)
+)};
     flex-shrink: 0;
     cursor: ${ifProp("disabled", "default", "pointer")};
     pointer-events: ${ifProp("disabled", "none", "auto")};
     color: ${(props) =>
-      props.styletype === "transparent" ||
+    props.styletype === "transparent" ||
       props.styletype === "transparent-border" ||
       props.styletype === "transparent-hover"
-        ? palette("grayscale", 2)
-        : props.styletype === "white"
+      ? palette("grayscale", 2)
+      : props.styletype === "white"
         ? "black"
         : "white"};
     -webkit-user-drag: none;
@@ -37,31 +37,31 @@ export const BtnStyle = css<BtnProps>`
     border-radius: 0.3rem;
     border-color:
     ${(props) =>
-      props.styletype === "transparent-border" || props.styletype === "white"
-        ? palette("grayscale", 2)
-        : "transparent"};
+    props.styletype === "transparent-border" || props.styletype === "white"
+      ? palette("grayscale", 2)
+      : "transparent"};
     outline: none;
     text-align: center;
     user-select: none;
     transition: all ease 0.2s;
-    border-style solid;
+    border-style: "solid";
     border-width: thin;
     text-decoration: none;
   
     &:hover {
       opacity: ${palette("opacityscale", 0)};
       ${(props) => {
-        if (props.styletype === "transparent-border") {
-          return css`
+    if (props.styletype === "transparent-border") {
+      return css`
             background-color: ${palette("grayscale", 2)};
             color: ${palette("grayscale", 6)};
           `;
-        } else if (props.styletype === "transparent-hover") {
-          return css`
+    } else if (props.styletype === "transparent-hover") {
+      return css`
             background-color: ${palette("grayscale", 5)};
           `;
-        }
-      }}
+    }
+  }}
     }
   }
 `;
