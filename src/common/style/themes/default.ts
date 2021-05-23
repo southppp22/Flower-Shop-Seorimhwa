@@ -73,6 +73,11 @@ const theme = {
       font-weight: 400;
       letter-spacing: 0.025rem;
     `,
+    body3: `
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spaceing: 0.04rem;
+    `,
     button: `
       font-size: 1.4rem;
       font-weight: 600;
