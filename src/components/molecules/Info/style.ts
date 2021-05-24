@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { theme } from "styled-tools";
+
 
 interface InfoProps {
   bgImgSource?: string;
@@ -18,16 +20,16 @@ export const InfoBox = styled.div<InfoProps>`
 
 export const Title = styled.div`
   /* border: 3px solid yellow; */
-  font-size: 3rem;
-  font-weight: bold;
+  ${theme("fontStyle.h3")}
   margin-bottom: 1.5rem;
 `
 
 export const TextBox = styled.div`
   /* border: 3px solid red; */
+  ${theme("fontStyle.body3")}
+  font-weight: 500;
   width: 40rem;
   text-align: center;
-  font-size: 1.8rem;
   line-height: 2rem;
   margin-bottom: 2rem;
 `;
