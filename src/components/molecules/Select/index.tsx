@@ -4,7 +4,7 @@ import Label, { Props as LabelProps } from "../../atoms/Label/index";
 
 export interface Props {
   labelProps: LabelProps;
-  selectList: Array<string>;
+  selectList: any;
 }
 
 function Select({ labelProps, selectList }: Props): React.ReactElement {
@@ -15,7 +15,7 @@ function Select({ labelProps, selectList }: Props): React.ReactElement {
         <S.Option value="default" disabled hidden>
           선택해주세요
         </S.Option>
-        {selectList.map((ele, i) => (
+        {selectList.map((ele: any, i: any) => (
           <S.Option key={i} value={ele}>
             {ele}
           </S.Option>
