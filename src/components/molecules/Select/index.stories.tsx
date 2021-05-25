@@ -1,18 +1,27 @@
 import React from "react";
-import { Story } from "@storybook/react";
-
-import Select, { Props } from "./index";
+import { withKnobs, text, array } from "@storybook/addon-knobs";
+import Select from "./index";
 
 export default {
   title: "Molecules / Select",
+  decorator: [withKnobs],
 };
 
-const Template: Story<Props> = (args) => <Select {...args} />;
+export const general: React.FC = () => {
+  const data = array("colorList", [
+    "빨강",
+    "노랑",
+    "파랑",
+    "분홍",
+    "알아서 해주세요",
+  ]);
 
-export const general = Template.bind({});
-general.args = {
-  labelProps: {
-    name: "꽃색상",
-  },
-  selectList: ["빨강", "노랑", "파랑", "분홍", "알아서 해주세요"],
+  return (
+    <Select
+      labelProps={{
+        name: text("labelName", "꽃색상"),
+      }}
+      selectList={data}
+    />
+  );
 };
