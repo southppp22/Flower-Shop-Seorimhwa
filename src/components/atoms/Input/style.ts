@@ -8,7 +8,7 @@ interface InputProps {
 export const Input = styled.input<InputProps>`
   ${theme(`fontStyle.body2`)};
   height: 4rem;
-  width: 100%;
+  width: 30rem;
   padding: 0 1rem;
 
   color: ${palette("grayscale", 2)};
