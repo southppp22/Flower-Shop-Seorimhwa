@@ -9,9 +9,7 @@ export default {
     (Story: any): React.ReactElement => (
       <div
         style={{
-          width: "100%",
-          border: "1px solid #ccc",
-          padding: "3rem",
+          width: "50%",
         }}
       >
         <Story />
