@@ -1,22 +1,15 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { palette, theme } from "styled-tools";
 import absCenter from "../../../common/style/mixin/absCenter";
+
+interface BtnProps {
+  grayScaleLevel: number;
+  position: string;
+}
 
 export const Container = styled.div`
   position: relative;
   width: 100%;
-`;
-
-export const MinusBtn = styled.label`
-  position: absolute;
-  top: -5px;
-  left: 0;
-  width: 3rem;
-  height: 3rem;
-  text-align: center;
-  cursor: pointer;
-  background-color: ${palette("grayscale", 4)};
-  border-radius: 50%;
 `;
 
 export const MinusIcon = styled.span`
@@ -36,18 +29,6 @@ export const MinusIcon = styled.span`
     content: "";
     ${absCenter};
   }
-`;
-
-export const PlusBtn = styled.label`
-  position: absolute;
-  right: 0;
-  top: -5px;
-  width: 3rem;
-  height: 3rem;
-  text-align: center;
-  cursor: pointer;
-  background-color: ${palette("grayscale", 4)};
-  border-radius: 50%;
 `;
 
 export const PlusIcon = styled.span`
@@ -92,4 +73,37 @@ export const Value = styled.div`
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+`;
+
+const BtnWrapperStyle = css<BtnProps>`
+  position: absolute;
+  top: -5px;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: ${(props) => palette("grayscale", props.grayScaleLevel)};
+  overflow: hidden;
+
+  //option
+  &:hover {
+    background-color: ${(props) =>
+      palette("grayscale", props.grayScaleLevel - 1)};
+  }
+
+  ${(props) => {
+    if (props.position === "left") {
+      return css`
+        left: 0;
+      `;
+    } else if (props.position === "right") {
+      return css`
+        right: 0;
+      `;
+    }
+  }}
+`;
+
+export const BtnWrapper = styled.div`
+  ${BtnWrapperStyle}
 `;

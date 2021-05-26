@@ -21,3 +21,6 @@ export default {
 const Template: Story = (args) => <Counter {...args} />;
 
 export const general = Template.bind({});
+general.args = {
+  grayScaleLevel: 3,
+};
