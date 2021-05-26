@@ -2,12 +2,15 @@ import styled from "styled-components";
 import { palette, theme } from "styled-tools";
 import clearfix from "../../../common/style/mixin/clearfix";
 
+export const Container1 = styled.div`
+  width: 100%;
+  padding: 2rem 0;
+  position: relative;
+`;
+
 export const Container = styled.div`
   ${theme("fontStyle.body3")};
-  padding: 1rem;
-  position: relative;
-  width: 100%;
-  height: 12rem;
+  width: 95%;
   display: flex;
 `;
 
@@ -51,9 +54,9 @@ export const QuantityWrapper = styled.div`
 `;
 
 export const DeleteBtn = styled.label`
-  position: relative;
-  top: 1.25rem;
-  right: 0
+  position: absolute;
+  top: 3rem;
+  right: 0;
   width: 3rem;
   height: 3rem;
   text-align: center;
@@ -64,7 +67,7 @@ export const DeleteIcon = styled.span`
   &,
   &::before,
   &::after {
-    width: 2rem;
+    width: 1.8rem;
     height: 2px;
     display: inline-block;
     background-color: ${palette("grayscale", 3)};
