@@ -2,11 +2,11 @@ import React from "react";
 import * as S from "./style";
 
 export interface Props {
-  name: string;
+  children: any;
 }
 
-function Label({ name }: Props): React.ReactElement {
-  return <S.Label>{name}</S.Label>;
+function Label({ children }: Props): React.ReactElement {
+  return <S.Label>{children}</S.Label>;
 }
 
 export default Label;
